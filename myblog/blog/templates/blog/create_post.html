@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Crea un nuovo post</title>
+</head>
+<body>
+    <h1>Crea un nuovo post</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Pubblica</button>
+    </form>
+
+    <p><a href="{% url 'home' %}">← Torna alla home</a></p>
+</body>
+</html>
